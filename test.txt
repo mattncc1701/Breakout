@@ -1,0 +1,7 @@
+Matthew Lydigsen
+
+- I mainly just ran the game and did a number of tests to make sure everything worked no matter the state. These tests included:
+	- losing and gaining the balls and miniBalls through shooting them and getting the powerUps
+	- setting the starting number of miniBalls and Balls to the max number of them you can have on the screen and checking to make sure 
+	no more miniBalls or balls get added to the display until the totals go down
+	- I also tested the snapshot and archiving to make sure it works properly and everything checks out 

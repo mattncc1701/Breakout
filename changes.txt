@@ -1,0 +1,39 @@
+Matthew Lydigsen
+
+Classes I added:
+
+- PowerUpStrategyDecoratorExtraBalls
+	- I modeled this after the PowerUpStrategyMiniBalls except now instead of incrementing miniBalls I increment the number of balls remaining 
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+- NumberOfBallsDisplay
+	- This class merely keeps track of active and inactive balls in the display
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+- NumberOfMiniBallsDisplay
+	- This class merely keeps track of active and inactive miniBalls in the display
+
+Classes I changed:
+
+- PowerUpFactory
+	- I added a new powerUp to handle the new ExtraBalls powerUp
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+- GameState
+	- I added four variables  ballsLost, ballsGained, miniBallsLost, miniBallsGained to keep track of when I need to update the display
+	- I also added calls to change the state of some booleans that tell the display when to add more balls to the display
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+- BreakOutGame
+	- I modeled the display similarly to how balls and miniBalls get added to the screen adding them once and then changing their active and
+	inactive states
+	- I added some global variables which include ballsDisplay, firstTimeBallDisplay, ballDisplay[], miniBallsDisplay, firstTimeMiniBallDisplay
+	miniBallDisplay[]
+	- the ballsDisplay and miniBallsDisplay are the two sprite group lists that acctuatly add the sprites to the screen
+	- the firstTimeBallDisplay and firstTimeMiniBallDisplay are used to keep track of if I already drew the balls on the screen
+	- the last two variables keep track of the position and state of each object in the display
+	- I added four methods displayBallRegion, addBallDisplay, displayMiniBallRegion, and addMiniBallDisplay
+	- the methods addBallDisplay and addMiniBallDisplay act like the methods addBall and addMiniBall which add the balls to the screen
+	- the other two methods are called continously in the update method and they add all of the objects to my two arrays and also controls
+	the active and inactive state of each object
+

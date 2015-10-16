@@ -1,0 +1,6 @@
+Matthew Lydigsen
+
+- For this assignment I started with the powerUp first since it was the easiest thing to do and it is partially required for additional testing
+later on
+- I then created my two classes that would represent all of the balls in the display
+- I then created my methods in BreakOutGame and started to implement them until they worked properly

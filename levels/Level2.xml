@@ -1,0 +1,22 @@
+<?xml version='1.0'?>
+<b:Game xmlns:b="breakout" grid_x="30" grid_y="20">
+	<b:blockTemplate id="red" width="30" height="20" score="50">
+		<b:colorType R="200" G="5" B="5"/>
+	</b:blockTemplate>
+	
+	<b:blockTemplate id="blue" width="30" height="20" score="50">
+		<b:colorType R="5" G="5" B="200"/>
+	</b:blockTemplate>
+
+	<b:level>
+		<b:image file="graphics/blackness.png">
+			<b:frame duration="0">
+				<b:location x="0" y="0" width="100" height="100"></b:location>
+			</b:frame>	
+		</b:image>
+		<b:blockPattern class="PatternSpiral" startx="13" starty="12" count="89">
+			<b:block>red</b:block>
+			<b:block>blue</b:block>
+		</b:blockPattern>
+	</b:level>
+</b:Game>

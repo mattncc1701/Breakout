@@ -1,0 +1,30 @@
+<?xml version='1.0'?>
+<b:Game xmlns:b="breakout" grid_x="50" grid_y="30">
+	<b:blockTemplate id="silver" width="50" height="30" score="20">
+		<b:colorType R="174" G="174" B="174"/>
+		<b:powerup class="incrOnHit"  probability="5"/>
+		<b:powerup class="decrOnMiss" probability="5"/>
+		<b:powerup class="incrDecr"   probability="5"/>
+		<b:powerup class="nothing"    probability="5"/>
+	</b:blockTemplate>
+	
+	<b:blockTemplate id="gold" width="50" height="30" score="100">
+		<b:colorType R="244" G="225" B="12"/>
+		<b:powerup class="incrOnHit"  probability="5"/>
+		<b:powerup class="decrOnMiss" probability="5"/>
+		<b:powerup class="incrDecr"   probability="5"/>
+		<b:powerup class="nothing"    probability="5"/>
+	</b:blockTemplate>
+
+	<b:level>
+		<b:image file="graphics/blackness.png">
+			<b:frame duration="0">
+				<b:location x="0" y="0" width="100" height="100"></b:location>
+			</b:frame>	
+		</b:image>
+		<b:blockPattern class="PatternStripeBox(10)" startx="3" starty="2">
+			<b:block>silver</b:block>
+			<b:block>gold</b:block>
+		</b:blockPattern>
+	</b:level>
+</b:Game>

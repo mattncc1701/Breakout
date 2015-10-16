@@ -1,0 +1,57 @@
+Matthew Lydigsen, Main Khan, Jake Berstein, Lucas Meira
+
+PowerUpStrategyDecoratorExtraBalls
+
+Superclass: PowerUpStrategyDecorator
+subclasses: none
+implementation: this class will follow the decorator pattern we have been using to implement the other powerUps
+responsiblities:
+	- an activate method that simply increments the number of lives in GameState
+collabrators:
+	- none
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+NumberOfBallsDisplay
+
+Superclass: Sprite
+subclasses: none
+implementation: the display we are going to add is no different than the other objects on the screen espically the balls and miniBalls they simply 
+don't move. So we will model this class after the ball class keeping the activityChanged methods and deleting the ball specific methods.
+responsiblities:
+	- we need methods similar to Ball which include: newGame, getActiveChangedSource, setActive, and notifyActivityChanged
+collabrators:
+	- BreakOutGame
+---------------------------------------------------------------------------------------------------------------------------------------------- 
+
+NumberOfMiniBallsDisplay
+
+Superclass: Sprite
+subclasses: none
+implementation: We will have this class to handle miniBalls since it will make it easier to manage each one seperatly. This class will be exactly
+the same as NumberOfBallsDisplay. 
+responsiblities:
+	- we need methods similar to MiniBall which include: newGame, getActiveChangedSource, setActive, and notifyActivityChanged
+collabrators:
+	- BreakOutGame
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+BreakOutGame (added reposnibilties)
+SuperClass: GameObject
+SubClasses: none
+responsibilities:
+	- The ball and miniBall displays don't have to maintain a lot of information so we figure it will be easier to just redraw the displays
+	every time we restart the game basing it off of the number of balls and miniBalls left which is saved in gameState. So we will not be using
+	the memento pattern
+	- To do this we will add four new methods two to add the display to the background and two to create a new instance of the displays as well
+	as maintain the state of each object in the display.
+	- We create a couple of arrays that store each object of the display and we add objects to the array through the methods we just created
+	- In those methods we will set their activity states to false or true depending on how many balls/miniballs the player currently has
+	- we will have some variables that keep track of when to add balls and miniBalls to the display
+	- we will call these two new display methods in the update method in this class so that the display is constantly up to date
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+PowerUpFactory (added reposnibilties)
+SuperClass: none
+SubClasses: none
+responsibilities:
+	- To include the new powerUp we simply need to add a new PowerUpStartegy to handle the new PowerUp

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Built-By: ML
+Main-Class: BOut.BreakOutEngine
+Class-Path: .
+
